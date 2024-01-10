@@ -1,16 +1,16 @@
 // The version of the cache.
-const VERSION = "v1";
+const VERSION = 'v1';
 
 // The name of the cache
 const CACHE_NAME = `visit-tracker-${VERSION}`;
 
 // The static resources that the app needs to function.
 const APP_STATIC_RESOURCES = [
-  "/",
-  "/index.html",
-  "/app.js",
-  "/styles.css",
-  "/icons/tiny.png",
+  '/',
+  '/index.html',
+  '/app.js',
+  '/styles.css',
+  '/icons/tiny.png',
 ];
 
 // On install, cache the static resources
@@ -18,12 +18,7 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
       const cache = await caches.open(CACHE_NAME);
-      cache.addAll(['/',
-                '/index.html',
-                '/styles.css',
-                '/app.js'
-                // Add more files/resources to cache as needed
-            ]);
+      cache.addAll(APP_STATIC_RESOURCES);
     })(),
   );
 });
