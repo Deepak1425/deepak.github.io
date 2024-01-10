@@ -1,17 +1,56 @@
 {
-    "name": "Your PWA Name",
-    "short_name": "PWA Short Name",
-    "description": "Description of your PWA",
-	"scope": "/deepak.github.io/",
-    "start_url": "/deepak.github.io/",
+    "theme_color": "#9013fe",
+    "background_color": "#9013fe",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#333333",
+    "scope": "/deepak.github.io/",
+    "start_url": "/deepak.github.io/",
+    "name": "Offshore Client Visit Schedule",
+    "short_name": "Client Visit",
+    "description": "This application will display the full schedule of Offshore Client Visit",
     "icons": [
         {
-            "src": "icons/icon.png",
+            "src": "/icons/icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+          {
+            "src": "/icons/icon-192x192.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "maskable any"
+          }
+    ],
+    "screenshots": [
+        {
+          "src": "/icons/icon.png",
+          "type": "image/png"
+        },
+        {
+          "src": "/icons/nexus.png",
+          "type": "image/png"
+        },
+        {
+          "src": "/icons/scalable.png",
+          "type": "image/png"
+        },
+        {
+          "src": "/icons/tiny.png",
+          "type": "image/png"
         }
-    ]
+      ]
 }
