@@ -13,18 +13,19 @@ const APP_STATIC_RESOURCES = [
   "/icons/tiny.png",
 ];
 
-self.addEventListener('install', event => {
-    event.waitUntil(
-        caches.open(CACHE_NAME).then(cache => {
-            return cache.addAll([
-                '/',
+// On install, cache the static resources
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    (async () => {
+      const cache = await caches.open(CACHE_NAME);
+      cache.addAll(['/',
                 '/index.html',
                 '/styles.css',
                 '/app.js'
                 // Add more files/resources to cache as needed
             ]);
-        })
-    );
+    })(),
+  );
 });
 
 
