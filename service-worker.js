@@ -1,6 +1,7 @@
+const CACHE_NAME = 'visit-tracker-v1';
 self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open('your-cache-name').then(cache => {
+        caches.open(CACHE_NAME).then(cache => {
             return cache.addAll([
                 '/',
                 '/index.html',
